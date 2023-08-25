@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -77,9 +78,25 @@ namespace TN_CSDLPT
             string MON_HOC = textBox2.Text.ToString().Trim();
             string NGAY_THI = textBox3.Text.ToString().Trim();
             string LAN_THI = textBox4.Text.ToString().Trim();
-            XuatKetQuaTHI f = new XuatKetQuaTHI(MON_HOC, NGAY_THI, LAN_THI);
+            //XuatKetQuaTHI f = new XuatKetQuaTHI(MON_HOC, NGAY_THI, LAN_THI);
             //f.MdiParent = this;
-            f.Show();
+            //f.Show();
+            XrptXemKetQua rpt = new XrptXemKetQua(Program.username, MON_HOC, LAN_THI);
+            rpt.xrLanthi.Text = LAN_THI;
+            rpt.xrHoten.Text = Program.mHoten;
+            rpt.xrMonthi.Text = MON_HOC;
+            rpt.xrNgaythi.Text = NGAY_THI;
+            rpt.xrLop.Text = Program.Lop;
+
+            ReportPrintTool print = new ReportPrintTool(rpt);
+            print.ShowPreviewDialog();
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

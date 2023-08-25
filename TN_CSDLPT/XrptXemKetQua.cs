@@ -12,13 +12,13 @@ namespace TN_CSDLPT
         {
             
         }
-        public XrptXemKetQua(String maNV, String MonHoc, int Lan)
+        public XrptXemKetQua(String maNV, String MonHoc, String Lan)
         {
             InitializeComponent();
             this.sqlDataSource1.Connection.ConnectionString = Program.connstr;
             this.sqlDataSource1.Queries[0].Parameters[0].Value = maNV;
-            this.sqlDataSource1.Queries[1].Parameters[1].Value = MonHoc;
-            this.sqlDataSource1.Queries[2].Parameters[2].Value = Lan;
+            this.sqlDataSource1.Queries[0].Parameters[1].Value = MonHoc;
+            this.sqlDataSource1.Queries[0].Parameters[2].Value = Lan;
             this.sqlDataSource1.Fill();
 
         }

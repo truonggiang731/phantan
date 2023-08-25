@@ -334,6 +334,38 @@ namespace TN_CSDLPT
         {
 
         }
+        private Form CheckExists(Type ftype)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.GetType() == ftype)
+                    return f;
+            return null;
+        }
+        private Form IsExists(Type type)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.GetType() == type) return f;
+            }
+            return null;
+        }
+        public void showForm(Type frmType)
+        {
+            Form frm = this.CheckExists(frmType);
+            if (frm != null) frm.Activate();
+            else
+            {
+                Form f = (Form)Activator.CreateInstance(frmType);
+
+                //gán cha của formDangNhap là form hiện tại và show lên
+                //f.MdiParent = this;
+                f.Show();
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            showForm(typeof(Formbangdiemlop));
+        }
 
         //Lưu
         private void lưuToolStripMenuItem_Click(object sender, EventArgs e)

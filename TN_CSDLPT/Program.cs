@@ -33,6 +33,7 @@ namespace TN_CSDLPT
         public static String mGroup = "";
         public static String mHoten = "";
         public static String MACOSO = "";
+        public static String Lop = "";
         public static int mChinhanh = 0; // lưu trữ chi nhánh người đó thuộc về
         public static frmMain frmChinh;
 

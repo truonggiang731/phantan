@@ -27,10 +27,15 @@ namespace TN_CSDLPT
             this.lanthi = lan_thi;
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         //Hiện thị danh sách khoa
         private void HienThiDuLieuGridView()
         {
-            String strlenh = "exec sp_LayChiTietDiem '"+Program.username+"', '"+lanthi+"', '"+ngaythi+"'";
+            String strlenh = "exec sp_LayChiTietDiem '"+Program.username+"', '"+ monhoc+ "', '"+lanthi+ "'";
             dt = Program.ExecSqlDataTable(strlenh);
             dataGridView1.DataSource = dt;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;// phu het bang

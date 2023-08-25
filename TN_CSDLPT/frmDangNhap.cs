@@ -121,7 +121,19 @@ namespace TN_CSDLPT
                     return f;
             return null;
         }*/
-
+        public void SetMaLop()
+        {
+            //-------------
+            if (Program.KetNoi() == 0) return;
+            String strleng1 = "select MALOP from SINHVIEN where MASV = '" + Program.username + "'";
+            Program.myReader = Program.ExecSqlDataReader(strleng1);
+            if (Program.myReader == null) return;
+            Program.myReader.Read();
+            Program.Lop = Program.myReader.GetString(0);
+            Program.myReader.Close();
+            Program.conn.Close();
+            //--------------
+        }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
 
@@ -163,10 +175,10 @@ namespace TN_CSDLPT
                 }
                 Program.mHoten = Program.myReader.GetString(1);
                 Program.mGroup = Program.myReader.GetString(2);
-
+                
                 Program.myReader.Close();
                 Program.conn.Close();
-
+                SetMaLop();
 
                 //--------------mở from---------------------------------
                 Form ftm = this.IsExists(typeof(FromSV));
