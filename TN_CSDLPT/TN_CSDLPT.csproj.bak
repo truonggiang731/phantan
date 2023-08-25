@@ -32,20 +32,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v22.1" />
-    <Reference Include="DevExpress.Data.Desktop.v22.1" />
-    <Reference Include="DevExpress.Data.v22.1" />
-    <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v22.1.Core" />
-    <Reference Include="DevExpress.Utils.v22.1" />
-    <Reference Include="DevExpress.XtraBars.v22.1" />
-    <Reference Include="DevExpress.Sparkline.v22.1.Core" />
-    <Reference Include="DevExpress.XtraEditors.v22.1" />
-    <Reference Include="DevExpress.XtraGrid.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="System" />
+    <Reference Include="DevExpress.BonusSkins.v22.2" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2" />
+    <Reference Include="DevExpress.Data.v22.2" />
+    <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v22.2.Core" />
+    <Reference Include="DevExpress.Utils.v22.2" />
+    <Reference Include="DevExpress.XtraBars.v22.2" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v22.2" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,13 +59,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DS.cs">
-      <DependentUpon>DS.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsMonThiCs1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DsMonThiCs1.Designer.cs">
+      <DependentUpon>DsMonThiCs1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBatDauThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBatDauThi.Designer.cs">
+      <DependentUpon>FormBatDauThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBoDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBoDe.Designer.cs">
+      <DependentUpon>FormBoDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangKyThi.Designer.cs">
+      <DependentUpon>FormDangKyThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiangVien.Designer.cs">
+      <DependentUpon>FormGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhoa.Designer.cs">
+      <DependentUpon>FormKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLop.Designer.cs">
+      <DependentUpon>FormLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMonHoc.Designer.cs">
+      <DependentUpon>FormMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSinhVien.Designer.cs">
+      <DependentUpon>FormSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThi.Designer.cs">
+      <DependentUpon>FormThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXemKetQua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemKetQua.Designer.cs">
+      <DependentUpon>FormXemKetQua.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -76,37 +142,79 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FromDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromDangKy.Designer.cs">
+      <DependentUpon>FromDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FromGiangVienDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromGiangVienDangKy.Designer.cs">
+      <DependentUpon>FromGiangVienDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FromSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromSV.Designer.cs">
+      <DependentUpon>FromSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quanly\frmKhoa.cs">
+    <Compile Include="XuatKetQuaTHI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Quanly\frmKhoa.Designer.cs">
-      <DependentUpon>frmKhoa.cs</DependentUpon>
+    <Compile Include="XuatKetQuaTHI.Designer.cs">
+      <DependentUpon>XuatKetQuaTHI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Quanly\frmLop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Quanly\frmLop.Designer.cs">
-      <DependentUpon>frmLop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Quanly\frmMonHoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Quanly\frmMonHoc.Designer.cs">
-      <DependentUpon>frmMonHoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Quanly\frmSinhVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Quanly\frmSinhVien.Designer.cs">
-      <DependentUpon>frmSinhVien.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="DsMonThiCs1.resx">
+      <DependentUpon>DsMonThiCs1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBatDauThi.resx">
+      <DependentUpon>FormBatDauThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBoDe.resx">
+      <DependentUpon>FormBoDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangKyThi.resx">
+      <DependentUpon>FormDangKyThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiangVien.resx">
+      <DependentUpon>FormGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKhoa.resx">
+      <DependentUpon>FormKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLop.resx">
+      <DependentUpon>FormLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMonHoc.resx">
+      <DependentUpon>FormMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSinhVien.resx">
+      <DependentUpon>FormSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThi.resx">
+      <DependentUpon>FormThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemKetQua.resx">
+      <DependentUpon>FormXemKetQua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromDangKy.resx">
+      <DependentUpon>FromDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromGiangVienDangKy.resx">
+      <DependentUpon>FromGiangVienDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromSV.resx">
+      <DependentUpon>FromSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -119,18 +227,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Quanly\frmKhoa.resx">
-      <DependentUpon>frmKhoa.cs</DependentUpon>
+    <EmbeddedResource Include="XuatKetQuaTHI.resx">
+      <DependentUpon>XuatKetQuaTHI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Quanly\frmLop.resx">
-      <DependentUpon>frmLop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Quanly\frmMonHoc.resx">
-      <DependentUpon>frmMonHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Quanly\frmSinhVien.resx">
-      <DependentUpon>frmSinhVien.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="App.config" />
     <None Include="DS.xsc">
       <DependentUpon>DS.xsd</DependentUpon>
@@ -152,6 +252,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Quanly\frmLop.resx.bak" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\book_50px.png" />
@@ -197,6 +298,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\college.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

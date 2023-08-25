@@ -193,11 +193,6 @@ namespace TN_CSDLPT
                 MessageBox.Show("Mã môn học phải từ 2 đến 5 ký tự", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (textBox1.Text.Contains(" "))
-            {
-                MessageBox.Show("Mã môn học không được chứa khoảng trống", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             else if (Check_Trung(textBox1.Text.Trim()) && flag == "add")
             {
                 MessageBox.Show("Mã môn học đã tồn tại", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -208,6 +203,11 @@ namespace TN_CSDLPT
             //Thêm
             if (flag == "add")
             {
+                 if (textBox1.Text.Contains(" "))
+                {
+                    MessageBox.Show("Mã môn học không được chứa khoảng trống", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 String strLenh = "sp_AddMonHoc";
                 SqlCommand sqlCommand = new SqlCommand(strLenh, Program.conn);
                 sqlCommand.CommandType = CommandType.StoredProcedure;

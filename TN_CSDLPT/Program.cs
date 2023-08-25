@@ -13,15 +13,11 @@ namespace TN_CSDLPT
 {
     internal static class Program
     {
-        // MAI HOÀNG THANH BÌNH
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        /// 
+       
 
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_Publisher = "Data source= DESKTOP-OU92CF5\\COSO3; Initial Catalog = TN_CSDLPT; Integrated Security=True";
+        public static String connstr_Publisher = "Data source= DESKTOP-J73EN84\\MAYCHU; Initial Catalog = TN_CSDLPT; Integrated Security=True";
 
         public static SqlDataReader myReader; //đọc dữ liệu
         public static String servername = ""; //Biến lưu trữ sever name

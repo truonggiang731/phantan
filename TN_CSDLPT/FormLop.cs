@@ -325,6 +325,16 @@ namespace TN_CSDLPT
             }
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         //Lưu
         private void lưuToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -463,7 +463,7 @@ namespace TN_CSDLPT
 
         private void AddChiTietBangDiem()
         {
-            String sql = "select ID_Diem from BANGDIEM where MASV = '"+Program.username+"' and MAMH = '"+ comboBox1.Text.ToString().Trim()+"' and LAN = '"+comboBox2.Text.ToString().Trim()+"' and NGAYTHI = '"+ comboBox3.Text.ToString().Trim()+"'";
+            String sql = "select ID_CHITIETBAITHI from BANGDIEM where MASV = '" + Program.username+"' and MAMH = '"+ comboBox1.Text.ToString().Trim()+"' and LAN = '"+comboBox2.Text.ToString().Trim()+"' and NGAYTHI = '"+ comboBox3.Text.ToString().Trim()+"'";
             Program.myReader = Program.ExecSqlDataReader(sql);
             if (Program.myReader == null) return;
             Program.myReader.Read();
@@ -474,13 +474,14 @@ namespace TN_CSDLPT
             //List<String> da = new List<String>();
             for (int i = 0; i < socau; i++)
             {
+
                 String str = "sp_AddCt_Diem";
                 SqlCommand sqlCommand = new SqlCommand(str, Program.conn);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.CommandTimeout = 600;
                 //id điểm, mã câu hỏi, đáp án mình chọn
 
-                SqlParameter parameter1 = new SqlParameter("@id_diem", SqlDbType.Int);
+                SqlParameter parameter1 = new SqlParameter("@id_chitietbaithi", SqlDbType.Int);
                 parameter1.Value = madiem;
                 sqlCommand.Parameters.Add(parameter1);
 
@@ -488,7 +489,11 @@ namespace TN_CSDLPT
                 parameter2.Value = Int16.Parse(((DataRowView)bdsThi[i])["cauhoi"].ToString());
                 sqlCommand.Parameters.Add(parameter2);
 
-                SqlParameter parameter3 = new SqlParameter("@dapan", SqlDbType.Char);
+                SqlParameter parameter7 = new SqlParameter("@thutu", SqlDbType.Int);
+                parameter7.Value = Int16.Parse((i+1).ToString());
+                sqlCommand.Parameters.Add(parameter7);
+
+                SqlParameter parameter3 = new SqlParameter("@luachon", SqlDbType.Char);
                 parameter3.Value = chon[i];
                 sqlCommand.Parameters.Add(parameter3);
 

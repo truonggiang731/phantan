@@ -367,6 +367,16 @@ namespace TN_CSDLPT
             }
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         public FormKhoa()
         {
             InitializeComponent();

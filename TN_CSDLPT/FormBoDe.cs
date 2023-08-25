@@ -444,5 +444,10 @@ namespace TN_CSDLPT
             }
             return false;
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

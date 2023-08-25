@@ -143,8 +143,8 @@ namespace TN_CSDLPT
             Program.mloginDN = Program.mlogin;
             Program.passwordDN = Program.password;
 
-            if (Program.servername == "DESKTOP-OU92CF5\\COSO1") Program.MACOSO = "CS1";
-            if (Program.servername == "DESKTOP-OU92CF5\\COSO2") Program.MACOSO = "CS2";
+            if (Program.servername == "DESKTOP-J73EN84\\COSO1") Program.MACOSO = "CS1";
+            if (Program.servername == "DESKTOP-J73EN84\\COSO2") Program.MACOSO = "CS2";
 
 
             if (isSinhVien)
